@@ -5,11 +5,10 @@
       <p>
         Esta es una app para la presentación <strong>"Awesome Web APIs"</strong>
       </p>
-      <h3>Demos</h3>
+      <h3>Demos:</h3>
       <ul>
-        <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-        <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa" target="_blank" rel="noopener">pwa</a></li>
-        <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
+        <li><router-link :to="{name: 'vibration'}">Vibration</router-link></li>
+        <li><router-link :to="{name: 'vibration-and-sound'}">Vibration and Sound</router-link></li>
       </ul>
     </div>
   </div>
@@ -24,7 +23,7 @@ h3 {
   margin: 3rem 0 0;
 }
 ul {
-  list-style-type: upper-roman;
+  list-style: none;
   padding: 0;
 }
 li {

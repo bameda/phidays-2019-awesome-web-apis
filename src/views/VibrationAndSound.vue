@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h3>Vibration Demo</h3>
+    <h3>Vibration and Sound Demo</h3>
     <div class="content">
       <button class="letter" @click="handleButtonOnClick">A</button>
       <button class="letter" @click="handleButtonOnClick">B</button>
@@ -63,6 +63,10 @@ const morseAlphabet = {
   Z: '−−··'
 }
 
+// Sound
+const FREQ = 1100
+const TYPE = 'square'
+
 // Intervals
 const INTERVAL = 30
 const LONG = 400 // For  -
@@ -84,9 +88,36 @@ const calculateTotalTimeOfPattern = (pattern) =>
   pattern.reduce((accumulator, currentValue) => accumulator + currentValue)
 
 export default {
-  name: 'vibration',
+  name: 'vibration-and-sound',
+
+  mounted () {
+    this.audioCtx = new (window.AudioContext || window.webkitAudioContext)()
+    this.masterVolume = this.audioCtx.createGain()
+    this.masterVolume.gain.setValueAtTime(0.05, this.audioCtx.currentTime)
+    this.masterVolume.connect(this.audioCtx.destination)
+  },
 
   methods: {
+    _playPattern (pattern) {
+      const oscillator = this.audioCtx.createOscillator()
+      oscillator.type = TYPE
+      oscillator.frequency.setValueAtTime(1100, this.audioCtx.currentTime)
+
+      let elapsed = 0
+
+      pattern.forEach((dur, i) => {
+        elapsed += dur / 1000
+        oscillator.frequency.setValueAtTime(
+          i % 2 === 0 ? 0 : FREQ,
+          this.audioCtx.currentTime + elapsed
+        )
+      })
+
+      oscillator.connect(this.masterVolume)
+      oscillator.start()
+      oscillator.stop(this.audioCtx.currentTime + elapsed)
+    },
+
     _vibrate (pattern) {
       navigator.vibrate(pattern)
     },
@@ -103,6 +134,7 @@ export default {
       const totalTime = calculateTotalTimeOfPattern(pattern)
 
       this._vibrate(pattern)
+      this._playPattern(pattern)
 
       setTimeout(
         () => { this.playing = false },

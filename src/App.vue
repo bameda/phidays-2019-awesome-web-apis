@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
+      <router-link :to="{name: 'home'}">Home</router-link> |
       <a href="#TODO" title="Ver Slides de la presentación">Slides</a>
     </div>
     <router-view class="view" />
@@ -20,6 +20,9 @@
 }
 
 #nav {
+  position: fixed;
+  top: 0px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -44,5 +47,6 @@
 
 .view {
   margin: 2rem;
+  padding-top: 3rem;
 }
 </style>

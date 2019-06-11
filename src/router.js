@@ -10,6 +10,16 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/vibration',
+      name: 'vibration',
+      component: () => import(/* webpackChunkName: "demo-vibration" */ './views/Vibration.vue')
+    },
+    {
+      path: '/vibration-and-sound',
+      name: 'vibration-and-sound',
+      component: () => import(/* webpackChunkName: "demo-vibration-and-sound" */ './views/VibrationAndSound.vue')
     }
     // {
     //   path: '/about',
