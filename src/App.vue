@@ -20,14 +20,29 @@
 }
 
 #nav {
-  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 3rem;
+  background-color: #ff2d58;
+  color: #ffffff;
+  box-shadow: 0 5px 5px -2px rgba(0,0,0,.3);
+
   a {
-    font-weight: bold;
-    color: #3452d4;
+    color: #ffffff;
+    margin: 0 .2rem;
+    text-decoration: none;
+
     &.router-link-exact-active {
-      color: #ff2d58;
+      color: #ffffff;
+      text-decoration: underline;
       font-weight: 800;
     }
   }
+}
+
+.view {
+  margin: 2rem;
 }
 </style>
