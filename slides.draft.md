@@ -17,7 +17,17 @@
 - Posibles Usos
 - Soporte
 
-## 4. WebVR & Gamepad API 
+
+## 4. Media​ Capabilities
+
+Camera, zoom, foto, video
+
+
+## 5. Service Worker
+ 
+## 6. Web Notification
+
+## 7. WebVR & Gamepad API 
 
 - Qué es
 - Demo
@@ -25,16 +35,6 @@
 - Posibles Usos
 - Soporte
 
+## 8. ¿Web Animations?
 
-## 5. Media​ Capabilities
-
-Camera, zoom, foto, video
-
-
-## 6. Service Worker
- 
-## 7. Web Notification
-
-
-## 7. ¿Web Animations?
 ## 7. ¿Web Audios
