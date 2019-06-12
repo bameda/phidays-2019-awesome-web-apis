@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h3>Geolocation Demo</h3>
+    <h3>Geolocation Api Demo</h3>
     <div class="content">
       <button class="button" @click="handleButtonOnClick">Geolocate me now!!</button>
       <div class="data" v-if="position">

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h3>Page Visibility Demo</h3>
+    <h3>Web Share Api Demo</h3>
     <div class="content">
       <button @click="handleShareSlides">
         Share slides!!

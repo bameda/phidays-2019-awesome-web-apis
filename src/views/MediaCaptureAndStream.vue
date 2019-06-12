@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h3>Media Capture and Stream Demo</h3>
+    <h3>Media Capture and Stream Api Demo</h3>
 
     <div class="content" v-if="!isSupported">
       This device does not support media capture and streaming.
@@ -157,7 +157,6 @@ video {
 }
 
 button{
-  font-family: "Times", "Times New Roman", "serif", "sans-serif", "EmojiSymbols";
   font-size: 1rem;
   color: #ffffff;
   background: #ff2d58;

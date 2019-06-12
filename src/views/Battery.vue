@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h3>Battery Demo</h3>
+    <h3>Battery Api Demo</h3>
     <div class="content">
       <div v-if="isBatteryApiSupported">
         <div class="battery">

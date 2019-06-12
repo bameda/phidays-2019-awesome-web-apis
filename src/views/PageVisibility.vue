@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h3>Page Visibility Demo</h3>
+    <h3>Page Visibility Api Demo</h3>
     <div class="content">
       <video ref="video" src="../assets/video/tere_llio_parda.mp4" autoplay controls />
     </div>

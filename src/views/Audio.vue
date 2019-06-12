@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h3>Vibration and Sound Demo</h3>
+    <h3>Audio Api Demo</h3>
     <div class="content">
       <button class="letter" @click="handleButtonOnClick">A</button>
       <button class="letter" @click="handleButtonOnClick">B</button>
