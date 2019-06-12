@@ -13,21 +13,28 @@
 import icon from '../assets/img/logo.png'
 
 const createNotification = () =>
-  new Notification(
-    'Hello, PhiDays lovers!!',
-    {
-      body: 'Thanks for coming to this talk',
-      icon: icon,
-      badge: icon,
-      vibrate: [200, 100, 200],
-      persistent: true
-    }
+  navigator.serviceWorker.ready.then((registration) =>
+    registration.showNotification(
+      'Hello, PhiDays lovers!!',
+      {
+        body: 'Thanks for coming to this talk',
+        icon: icon,
+        badge: icon,
+        vibrate: [200, 100, 200],
+        persistent: true
+      }
+    )
   )
 
 export default {
   name: 'notification',
   methods: {
     handleSendNotification: () => {
+      if (!('serviceWorker' in navigator)) {
+        alert('This browser does not support Service Worker')
+        return
+      }
+
       if (!('Notification' in window)) {
         alert('This browser does not support Notification Web API')
         return
