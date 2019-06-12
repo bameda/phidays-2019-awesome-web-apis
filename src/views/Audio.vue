@@ -81,17 +81,18 @@ const letterToPattern = letter => {
     pattern.push(INTERVAL)
   })
 
+  // Return for `R` = '.-.' => [200, 30, 100, 30, 200]
   return pattern
 }
 
 const calculateTotalTimeOfPattern = (pattern) =>
-  pattern.reduce((accumulator, currentValue) => accumulator + currentValue)
+  pattern.reduce((a, c) => a + c)
 
 export default {
-  name: 'vibration-and-sound',
+  name: 'audio',
 
   mounted () {
-    this.audioCtx = new (window.AudioContext || window.webkitAudioContext)()
+    this.audioCtx = new window.AudioContext()
     this.masterVolume = this.audioCtx.createGain()
     this.masterVolume.gain.setValueAtTime(0.05, this.audioCtx.currentTime)
     this.masterVolume.connect(this.audioCtx.destination)
@@ -152,19 +153,20 @@ h3 {
 
 .content {
   display: flex;
+  align-items: center;
   justify-content: space-evenly;
   align-content: space-evenly;
   flex-wrap: wrap;
+  max-width: 600px;
   padding: 2rem;
+  margin: 0;
 
   .letter{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3rem;
     color:#ffffff;
     background: #ff2d58;
-    font-size: 3rem;
-    margin: 2rem;
-    @media screen and (min-width: 768px) {
-     font-size:8rem;
-    }
+    padding: .2rem;
   }
 }
 </style>

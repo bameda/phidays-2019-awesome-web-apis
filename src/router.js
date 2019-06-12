@@ -12,14 +12,34 @@ export default new Router({
       component: Home
     },
     {
+      path: '/geolocaton',
+      name: 'geolocation',
+      component: () => import(/* webpackChunkName: "demo-geolocation" */ './views/Geolocation.vue')
+    },
+    {
+      path: '/battery',
+      name: 'battery',
+      component: () => import(/* webpackChunkName: "demo-battery" */ './views/Battery.vue')
+    },
+    {
+      path: '/page-visibility',
+      name: 'page-visibility',
+      component: () => import(/* webpackChunkName: "demo-" */ './views/PageVisibility.vue')
+    },
+    {
       path: '/vibration',
       name: 'vibration',
       component: () => import(/* webpackChunkName: "demo-vibration" */ './views/Vibration.vue')
     },
     {
-      path: '/vibration-and-sound',
-      name: 'vibration-and-sound',
-      component: () => import(/* webpackChunkName: "demo-vibration-and-sound" */ './views/VibrationAndSound.vue')
+      path: '/audio',
+      name: 'audio',
+      component: () => import(/* webpackChunkName: "demo-audio" */ './views/Audio.vue')
+    },
+    {
+      path: '/media-capture-and-stream',
+      name: 'media-capture-and-stream',
+      component: () => import(/* webpackChunkName: "demo-media-capture-and-stream" */ './views/MediaCaptureAndStream.vue')
     }
     // {
     //   path: '/about',
