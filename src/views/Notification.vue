@@ -12,19 +12,23 @@
 <script>
 import icon from '../assets/img/logo.png'
 
-const createNotification = () =>
-  navigator.serviceWorker.ready.then((registration) =>
-    registration.showNotification(
-      'Hello, PhiDays lovers!!',
-      {
-        body: `Thanks for coming to this talk. Now it's ${new Date().toLocaleTimeString()}`,
-        icon: icon,
-        badge: icon,
-        vibrate: [200, 100, 200],
-        persistent: true
-      }
-    )
-  )
+const createNotification = () => {
+  const text = 'Hello, PhiDays lovers!!'
+  const options = {
+    body: `Thanks for coming to this talk.\nNow it's ${new Date().toLocaleTimeString()}`,
+    icon: icon,
+    badge: icon,
+    vibrate: [200, 100, 200],
+    persistent: true
+  }
+  // With Notification API
+  return new Notification(text, options)
+
+  // With Service Worker API
+  // return navigator.serviceWorker.ready.then((registration) =>
+  //   registration.showNotification(text, options)
+  // )
+}
 
 export default {
   name: 'notification',
