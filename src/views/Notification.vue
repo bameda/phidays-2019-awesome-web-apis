@@ -17,7 +17,7 @@ const createNotification = () =>
     registration.showNotification(
       'Hello, PhiDays lovers!!',
       {
-        body: 'Thanks for coming to this talk',
+        body: `Thanks for coming to this talk. Now it's ${new Date().toLocaleTimeString()}`,
         icon: icon,
         badge: icon,
         vibrate: [200, 100, 200],
