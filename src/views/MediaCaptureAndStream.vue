@@ -152,6 +152,10 @@ h3 {
   margin: 0;
 }
 
+video {
+  max-width: 90vw;
+}
+
 button{
   font-family: "Times", "Times New Roman", "serif", "sans-serif", "EmojiSymbols";
   font-size: 1rem;

@@ -22,14 +22,14 @@ export default new Router({
       component: () => import(/* webpackChunkName: "demo-battery" */ './views/Battery.vue')
     },
     {
-      path: '/page-visibility',
-      name: 'page-visibility',
-      component: () => import(/* webpackChunkName: "demo-" */ './views/PageVisibility.vue')
-    },
-    {
       path: '/vibration',
       name: 'vibration',
       component: () => import(/* webpackChunkName: "demo-vibration" */ './views/Vibration.vue')
+    },
+    {
+      path: '/media-capture-and-stream',
+      name: 'media-capture-and-stream',
+      component: () => import(/* webpackChunkName: "demo-media-capture-and-stream" */ './views/MediaCaptureAndStream.vue')
     },
     {
       path: '/audio',
@@ -37,9 +37,14 @@ export default new Router({
       component: () => import(/* webpackChunkName: "demo-audio" */ './views/Audio.vue')
     },
     {
-      path: '/media-capture-and-stream',
-      name: 'media-capture-and-stream',
-      component: () => import(/* webpackChunkName: "demo-media-capture-and-stream" */ './views/MediaCaptureAndStream.vue')
+      path: '/page-visibility',
+      name: 'page-visibility',
+      component: () => import(/* webpackChunkName: "demo-" */ './views/PageVisibility.vue')
+    },
+    {
+      path: '/shared',
+      name: 'shared',
+      component: () => import(/* webpackChunkName: "demo-audio" */ './views/Shared.vue')
     }
     // {
     //   path: '/about',

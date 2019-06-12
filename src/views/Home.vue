@@ -13,6 +13,7 @@
         <li>Demo: <router-link :to="{name: 'media-capture-and-stream'}">Media Capture and Stream</router-link></li>
         <li>Demo: <router-link :to="{name: 'page-visibility'}">Page Visibility</router-link></li>
         <li>Demo: <router-link :to="{name: 'audio'}">Audio</router-link></li>
+        <li>Demo: <router-link :to="{name: 'shared'}">Shared</router-link></li>
         <!-- <li>Demo: <router-link :to="{name: 'service-worker'}">Service Worker</router-link></li> -->
         <!-- <li>Demo: <router-link :to="{name: 'notifications'}">Notifications</router-link></li> -->
         <!-- <li>Demo: <router-link :to="{name: 'animations'}">Animations</router-link></li> -->
