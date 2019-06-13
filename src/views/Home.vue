@@ -7,7 +7,7 @@
       </p>
       <h3>Demos:</h3>
       <ul>
-        <li>Web Api Manifesto</li>
+        <li>Web App Manifest</li>
         <li><router-link :to="{name: 'geolocation'}">Geolocation Api</router-link></li>
         <li><router-link :to="{name: 'battery'}">Battery Api</router-link></li>
         <li><router-link :to="{name: 'vibration'}">Vibration Api</router-link></li>
@@ -16,9 +16,9 @@
         <li><router-link :to="{name: 'audio'}">Audio Api</router-link></li>
         <li><router-link :to="{name: 'page-visibility'}">Page Visibility Api</router-link></li>
         <li><router-link :to="{name: 'shared'}">Web Shared Api</router-link></li>
-        <li>Service Worker</li>
+        <li><router-link :to="{name: 'animation'}">Animations</router-link></li>
         <li><router-link :to="{name: 'notification'}">Notification Api</router-link></li>
-        <li><router-link :to="{name: 'animations'}">Animations</router-link></li>
+        <li>Service Worker</li>
       </ul>
     </div>
   </div>

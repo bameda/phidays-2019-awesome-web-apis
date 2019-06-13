@@ -47,6 +47,11 @@ export default new Router({
       component: () => import(/* webpackChunkName: "demo-audio" */ './views/Shared.vue')
     },
     {
+      path: '/animation',
+      name: 'animation',
+      component: () => import(/* webpackChunkName: "demo-animation" */ './views/Animation.vue')
+    },
+    {
       path: '/notification',
       name: 'notification',
       component: () => import(/* webpackChunkName: "demo-notification" */ './views/Notification.vue')

@@ -4,7 +4,7 @@
       <img class="logo" alt src="./assets/img/logo-letters.png" />
       <div id="nav">
         <router-link :to="{name: 'home'}">Home</router-link> |
-        <a href="#TODO" title="See slides" target="_blank">Slides</a>
+        <a href="https://slides.com/bameda/awesome-webapis/" title="See slides" target="_blank">Slides</a>
       </div>
     </header>
     <router-view class="view" />

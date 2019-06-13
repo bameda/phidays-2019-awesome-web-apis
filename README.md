@@ -1,5 +1,7 @@
 # PhiDays: Awesome Web APIs
 
+Slides are in [https://slides.com/bameda/awesome-webapis/](https://slides.com/bameda/awesome-webapis/)
+
 ## Project setup
 ```
 yarn install
